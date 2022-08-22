@@ -6,10 +6,15 @@ pipeline {
     stages {
         stage('first stage') {
             steps {
-                echo 'we want to Build hello_world example file'
-			sh 'pip install Appium-Python-Client && hello.py'
+		sh 'python3 --version'
             }
         }
+	stage('second stage') {
+            steps {
+                echo 'we want to Build hello_world example file'
+			sh ' python3 hello.py'
+			}
+		}
     }
 }
 
