@@ -17,7 +17,6 @@ pipeline {
                 echo 'we want to Build hello_world example file'
 		sh 'virtualenv venv && . venv/bin/activate && pip install -r requirements.txt && hello.py'
 		}
-		}
             }
         }
     }
