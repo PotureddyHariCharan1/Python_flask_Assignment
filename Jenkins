@@ -2,6 +2,12 @@ pipeline {
     agent any
     options {
         timeout(time: 1, unit: 'HOURS') 
+
+    }
+    environment {
+    	PRIMARY_BRANCH = 'main'
+	FEATURE_BRANCH_DEPLOYMENT = 'true'
+	TARGET_BRANCH = 'dev'
     }
     stages {
         stage('first stage') {
