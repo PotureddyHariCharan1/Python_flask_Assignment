@@ -4,19 +4,10 @@ pipeline {
         timeout(time: 1, unit: 'HOURS') 
     }
     stages {
-        stage('Checkout project') {
-            steps {
-                script {
-                    git branch: "main",
-                        credentialsId: 'PotureddyHariCharan1',
-                        url: 'https://PotureddyHariCharan1@github.org/Python_flask_Assignment/'
-			}
-		}
         stage('first stage') {
             steps {
                 echo 'we want to Build hello_world example file'
 		sh 'virtualenv venv && . venv/bin/activate && pip install -r requirements.txt && hello.py'
-		}
             }
         }
     }
