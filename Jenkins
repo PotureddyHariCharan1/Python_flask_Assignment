@@ -12,7 +12,6 @@ pipeline {
                         url: 'https://PotureddyHariCharan1@github.org/Python_flask_Assignment/'
 			}
 		}
-    stages {
         stage('first stage') {
             steps {
                 echo 'we want to Build hello_world example file'
