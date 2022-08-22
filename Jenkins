@@ -7,8 +7,7 @@ pipeline {
         stage('first stage') {
             steps {
                 echo 'we want to Build hello_world example file'
-		            sh 'pip install Appium-Python-Client && hello.py'
-                }
+			sh 'pip install Appium-Python-Client && hello.py'
             }
         }
     }
