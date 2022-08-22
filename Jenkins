@@ -1,15 +1,16 @@
 pipeline {
-  agent { docker { image 'python:3.7.2' } }
-  stages {
-    stage('build') {
-      steps {
-        sh 'pip install -r requirements.txt'
-      }
+    agent any
+    options {
+        timeout(time: 1, unit: 'HOURS') 
     }
-    stage('test') {
-      steps {
-        sh 'python test.py'
-      }    
+    stages {
+        stage('first stage') {
+            steps {
+                echo 'we want to Build hello_world example file'
+		            sh 'pip install Appium-Python-Client && hello.py'
+                }
+            }
+        }
     }
-  }
 }
+
