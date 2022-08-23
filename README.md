@@ -62,3 +62,4 @@
 >> In jenkins Click on the `Build Triggers` tab and then on the `GitHub hook trigger for GITScm polling`.
 
 >> now if any changes are made on given github repo link it will auto triggers the build's
+
