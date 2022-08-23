@@ -1,6 +1,6 @@
 # Python_flask_Assignment
 
-## Instalations
+## Installation
 
 > How to Install Flask on Ubuntu 20.04
 
