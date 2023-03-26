@@ -19,7 +19,7 @@ pipeline {
 	stage('second stage') {
             steps {
                 echo 'we want to Build hello_world example file'
-			sh ' python3 hello.py'
+			sh 'hello.sh'
 			}
 		}
     }
