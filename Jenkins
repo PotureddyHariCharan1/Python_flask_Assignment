@@ -11,11 +11,11 @@ pipeline {
 	TARGET_BRANCH = 'dev'
     }
     stages {
-        stage('first stage') {
-            steps {
-		sh 'python3 --version'
-            }
-        }
+  #      stage('first stage') {
+  #          steps {
+#		sh 'python3 --version'
+ #           }
+  #      }
 	stage('second stage') {
             steps {
                 echo 'we want to Build hello_world example file'
