@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    options {
+        timeout(time: 1, unit: 'HOURS') 
+	buildDiscarder( logRotator ( numToKeepStr: '5' ) )
+
+    }
+    environment {
+    	PRIMARY_BRANCH = 'main'
+	FEATURE_BRANCH_DEPLOYMENT = 'true'
+	TARGET_BRANCH = 'dev'
+    }
+    stages {
+	    stage('second stage') {
+            steps {
+                echo 'we want to Build hello_world example file'
+			      sh 'hello.sh'
+			}
+		}
+    }
+}
+
